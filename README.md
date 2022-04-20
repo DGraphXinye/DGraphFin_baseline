@@ -42,7 +42,7 @@ python gnn.py --model gatv2_neighsampler --dataset DGraphFin --epochs 200 --runs
 Performance on **DGraphFin**(10 runs):
 
 | Methods   | Train AUC  | Valid AUC  | Test AUC  |
-|  ----  | ----  |  ---- | ---- |
+|  :----  | ----  |  ---- | ---- |
 | MLP | 0.7221 ± 0.0014 | 0.7135 ± 0.0010 | 0.7192 ± 0.0009 |
 | GCN | 0.7108 ± 0.0027 | 0.7078 ± 0.0027 | 0.7078 ± 0.0023 |
 | GraphSAGE| 0.7682 ± 0.0014 | 0.7548 ± 0.0013 | 0.7621 ± 0.0017 |
