@@ -1,12 +1,12 @@
 ## Environments
 Implementing environment:  
-numpy = 1.21.2  
-pytorch = 1.6.0  
-torch_geometric = 1.7.2  
-torch_scatter = 2.0.8  
-torch_sparse = 0.6.9  
+- numpy = 1.21.2  
+- pytorch = 1.6.0  
+- torch_geometric = 1.7.2  
+- torch_scatter = 2.0.8  
+- torch_sparse = 0.6.9  
 
-GPU: Tesla V100 32G  
+- GPU: Tesla V100 32G  
 
 
 ## Training
