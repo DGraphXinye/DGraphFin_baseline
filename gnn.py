@@ -82,13 +82,13 @@ def test(model, data, split_idx, evaluator, no_conv=False):
         
             
 def main():
-    parser = argparse.ArgumentParser(description='gen_models')
+    parser = argparse.ArgumentParser(description='gnn_models')
     parser.add_argument('--device', type=int, default=0)
     parser.add_argument('--dataset', type=str, default='DGraphFin')
     parser.add_argument('--log_steps', type=int, default=10)
     parser.add_argument('--model', type=str, default='mlp')
     parser.add_argument('--use_embeddings', action='store_true')
-    parser.add_argument('--epochs', type=int, default=500)
+    parser.add_argument('--epochs', type=int, default=200)
     parser.add_argument('--runs', type=int, default=10)
     parser.add_argument('--fold', type=int, default=0)
     

@@ -94,7 +94,7 @@ def test(layer_loader, model, data, split_idx, evaluator, device, no_conv=False)
         
             
 def main():
-    parser = argparse.ArgumentParser(description='gen_models')
+    parser = argparse.ArgumentParser(description='minibatch_gnn_models')
     parser.add_argument('--device', type=int, default=0)
     parser.add_argument('--dataset', type=str, default='DGraphFin')
     parser.add_argument('--log_steps', type=int, default=10)
