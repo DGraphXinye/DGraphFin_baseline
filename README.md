@@ -15,18 +15,22 @@ Implementing environment:
 ```bash
 python gnn.py --model mlp --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
+
 - **GCN**
 ```bash
 python gnn.py --model gcn --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
+
 - **GraphSAGE**
 ```bash
 python gnn.py --model sage --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
+
 - **GraphSAGE (NeighborSampler)**
 ```bash
 python gnn.py --model sage_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
+
 - **GAT (NeighborSampler)**
 ```bash
 python gnn.py --model gat_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
