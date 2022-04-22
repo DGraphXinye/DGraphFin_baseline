@@ -1,3 +1,5 @@
+This repo provides a collection of baselines for DGraphFin dataset. Please download the dataset at [DGraph website](http://dgraph.xinye.com) and place it under the folder './dataset/DGraphFin/raw'.  
+
 ## Environments
 Implementing environment:  
 - numpy = 1.21.2  
