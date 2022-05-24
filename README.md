@@ -30,17 +30,17 @@ python gnn.py --model sage --dataset DGraphFin --epochs 200 --runs 10 --device 0
 
 - **GraphSAGE (NeighborSampler)**
 ```bash
-python gnn.py --model sage_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
+python gnn_mini_batch.py --model sage_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
 
 - **GAT (NeighborSampler)**
 ```bash
-python gnn.py --model gat_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
+python gnn_mini_batch.py --model gat_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
 
 - **GATv2 (NeighborSampler)**
 ```bash
-python gnn.py --model gatv2_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
+python gnn_mini_batch.py --model gatv2_neighsampler --dataset DGraphFin --epochs 200 --runs 10 --device 0
 ```
 
 
