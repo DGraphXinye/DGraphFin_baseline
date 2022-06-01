@@ -27,7 +27,7 @@ class GAT_NeighSampler(torch.nn.Module):
             if self.batchnorm:
                 self.bns = torch.nn.ModuleList()
                 self.bns.append(torch.nn.BatchNorm1d(hidden_channels*layer_heads[0]))
-            for _ in range(num_layers - 2):
+            for i in range(num_layers - 2):
                 self.convs.append(GATConv(hidden_channels*layer_heads[i-1], hidden_channels, heads=layer_heads[i], concat=True))
                 if self.batchnorm:
                     self.bns.append(torch.nn.BatchNorm1d(hidden_channels*layer_heads[i-1]))
@@ -131,7 +131,7 @@ class GATv2_NeighSampler(torch.nn.Module):
             if self.batchnorm:
                 self.bns = torch.nn.ModuleList()
                 self.bns.append(torch.nn.BatchNorm1d(hidden_channels*layer_heads[0]))
-            for _ in range(num_layers - 2):
+            for i in range(num_layers - 2):
                 self.convs.append(GATv2Conv(hidden_channels*layer_heads[i-1], hidden_channels, heads=layer_heads[i], concat=True))
                 if self.batchnorm:
                     self.bns.append(torch.nn.BatchNorm1d(hidden_channels*layer_heads[i-1]))

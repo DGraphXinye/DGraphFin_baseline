@@ -24,7 +24,7 @@ class SAGE_NeighSampler(torch.nn.Module):
         self.num_layers = num_layers
         if self.batchnorm:
             self.bns.append(torch.nn.BatchNorm1d(hidden_channels))
-        for _ in range(num_layers - 2):
+        for i in range(num_layers - 2):
             self.convs.append(SAGEConv(hidden_channels, hidden_channels))
             if self.batchnorm:
                 self.bns.append(torch.nn.BatchNorm1d(hidden_channels))
