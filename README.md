@@ -1,3 +1,9 @@
+<p align="center">
+  <img height="150" src="https://raw.githubusercontent.com/DGraphXinye/dgraph_theme/main/img/DGraph_log.svg" />
+</p>
+
+--------------------------------------------------------------------------------
+
 This repo provides a collection of baselines for DGraphFin dataset. Please download the dataset from the [DGraph](http://dgraph.xinye.com) web and place it under the folder './dataset/DGraphFin/raw'.  
 
 ## Environments
