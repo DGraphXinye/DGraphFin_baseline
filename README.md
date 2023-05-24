@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="150" src="https://raw.githubusercontent.com/DGraphXinye/dgraph_theme/main/img/DGraph_log.svg" />
+  <img height="100" src="https://raw.githubusercontent.com/DGraphXinye/dgraph_theme/main/img/DGraph_log.svg" />
 </p>
 
 --------------------------------------------------------------------------------
