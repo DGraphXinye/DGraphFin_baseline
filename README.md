@@ -3,8 +3,38 @@
 </p>
 
 --------------------------------------------------------------------------------
+* [Pytorch Geometric Loader](#Pytorch-Geometric-Loader)
+* [Baselines](#Baselines)
+  * [Environments](#Environments)
+  * [Training](#Training)
+  * [Performances](#Performances)
 
-This repo provides a collection of baselines for DGraphFin dataset. Please download the dataset from the [DGraph](http://dgraph.xinye.com) web and place it under the folder './dataset/DGraphFin/raw'.  
+# Pytorch Geometric Loader
+[Pytorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/index.html) (`>=2.2.0`) provides an easy-to-use dataset loader for [DGraphFin](https://dgraph.xinye.com/dataset). Below is an example in [Pytorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/index.html) with only a few lines of code to load [DGraphFin](https://dgraph.xinye.com/dataset) and get the train/valid/test mask.
+
+```python
+import torch_geometric
+
+# check your torch_geometric version and make sure it is not lower than 2.2.0
+print(torch_geometric.__version__)
+>>> '2.2.0'
+
+# Please download DGraphFin dataset file 'DGraphFin.zip' on our website 'https://dgraph.xinye.com' and place it under directory './dataset/raw'
+# Otherwise an error would pop out "Dataset not found. Please download 'DGraphFin.zip' from 'https://dgraph.xinye.com' and move it to './raw' "
+from torch_geometric.datasets import DGraphFin
+
+dataset = DGraphFin(root='./dataset')
+data = dataset[0]
+
+data
+>>> Data(x=[3700550, 17], edge_index=[2, 4300999], y=[3700550], edge_type=[4300999], edge_time=[4300999], train_mask=[3700550], val_mask=[3700550], test_mask=[3700550])
+```
+
+**Note:** Please download DGraphFin dataset file 'DGraphFin.zip' on our website 'https://dgraph.xinye.com' and place it under directory `'./dataset/raw'` before running the example, otherwise an error would pop out `"Dataset not found. Please download 'DGraphFin.zip' from 'https://dgraph.xinye.com' and move it to './raw' "`
+
+# Baselines
+
+This repo provides a collection of baselines of [DGraphFin](https://dgraph.xinye.com/dataset). Please download the dataset file on our [website](http://dgraph.xinye.com) and place it under the folder `'./dataset/DGraphFin/raw'`.  
 
 ## Environments
 Implementing environment:  
@@ -18,6 +48,7 @@ Implementing environment:
 
 
 ## Training
+To get the performance for each model, simply run the following lines of code:
 
 - **MLP**
 ```bash
@@ -50,8 +81,8 @@ python gnn_mini_batch.py --model gatv2_neighsampler --dataset DGraphFin --epochs
 ```
 
 
-## Results:
-Performance on **DGraphFin**(10 runs):
+## Performances:
+Below are the performances on **DGraphFin**(10 runs):
 
 | Methods   | Train AUC  | Valid AUC  | Test AUC  |
 |  :----  | ----  |  ---- | ---- |
