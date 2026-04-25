@@ -3,11 +3,13 @@
 </p>
 
 --------------------------------------------------------------------------------
-* [Pytorch Geometric Loader](#Pytorch-Geometric-Loader)
-* [Baselines](#Baselines)
-  * [Environments](#Environments)
-  * [Training](#Training)
-  * [Performances](#Performances)
+- [Pytorch Geometric Loader](#pytorch-geometric-loader)
+- [Baselines](#baselines)
+  - [Environments](#environments)
+  - [Training](#training)
+  - [Performances:](#performances)
+- [Datasets Overview](#datasets-overview)
+  - [Summary](#summary)
 
 # Pytorch Geometric Loader
 [Pytorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/index.html) (`>=2.2.0`) provides an easy-to-use dataset loader for [DGraphFin](https://dgraph.xinye.com/dataset). Below is an example in [Pytorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/index.html) with only a few lines of code to load [DGraphFin](https://dgraph.xinye.com/dataset) and get the train/valid/test mask.
@@ -92,3 +94,22 @@ Below are the performances on **DGraphFin**(10 runs):
 | GraphSAGE (NeighborSampler)  | 0.7845 ± 0.0013 | 0.7674 ± 0.0005 | **0.7761 ± 0.0018** |
 | GAT (NeighborSampler)        | 0.7396 ± 0.0018 | 0.7233 ± 0.0012 | 0.7333 ± 0.0024 |
 | GATv2 (NeighborSampler)      | 0.7698 ± 0.0083 | 0.7526 ± 0.0089 | 0.7624 ± 0.0081 |
+
+
+# Datasets Overview
+
+To advance research on graph foundation models and the evolution of dynamic graphs, we continue to release real-world graph datasets. Three large-scale datasets are currently publicly available, with details provided below.
+
+## Summary
+
+| Name | Evolving Pattern Modeling | Graph Anomaly Detection | Pretraining of Dynamic Graph |
+| :--- | :---: | :---: | :---: |
+| [DGraph-Fin](https://dgraph.xinye.com/dataset#DGraph-Fin) | ✓ | ✓ | ✓ |
+| [DGraph-Fin2](https://dgraph.xinye.com/dataset#DGraph-Fin2) | ✓ | ✓ | ✓ |
+| [DGraph-Nearby](https://dgraph.xinye.com/dataset#DGraph-Nearby) | ✓ |  | ✓ |
+
+| Name | Type | Time Unit | Time span | # Node | # Edge | Is Directed | Node label | Edge label | Temporal node label |
+| :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| [DGraph-Fin](https://dgraph.xinye.com/dataset#DGraph-Fin) | Social Network | Day | ~ 2 Years | 3,700,550 | 4,300,999 | ✓ | ✓ |  |  |
+| [DGraph-Fin2](https://dgraph.xinye.com/dataset#DGraph-Fin2) | Social Network | Day | ~ 2 Years | 3,700,550 | 4,300,999 | ✓ | ✓ |  | ✓ |
+| [DGraph-Nearby](https://dgraph.xinye.com/dataset#DGraph-Nearby) | Social Network | Day | ~ 3 Years | 21,796 | 190,332 | ✓ |  |  |  |
